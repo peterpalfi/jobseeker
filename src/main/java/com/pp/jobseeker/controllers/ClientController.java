@@ -3,6 +3,8 @@ package com.pp.jobseeker.controllers;
 import com.pp.jobseeker.exceptions.ClientAlreadyExistsException;
 import com.pp.jobseeker.models.dtos.RegisterClientDto;
 import com.pp.jobseeker.repositories.services.ClientService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -17,6 +19,7 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.UUID;
 
+@Api(value = "ClientController", tags = {"ClientController"})
 @RequestMapping(value = "/client")
 @RestController
 public class ClientController {
@@ -24,6 +27,7 @@ public class ClientController {
     @Autowired
     private ClientService clientService;
 
+    @ApiOperation(value = "Register as a client", response = Map.class, tags = "registerClient")
     @RequestMapping(method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Map<String, UUID>> registerClient(@Valid @RequestBody RegisterClientDto registerClientDto)
             throws ClientAlreadyExistsException {

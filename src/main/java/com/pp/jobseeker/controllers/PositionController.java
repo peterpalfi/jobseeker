@@ -5,6 +5,8 @@ import com.pp.jobseeker.models.dtos.CreatePositionDto;
 import com.pp.jobseeker.models.dtos.SearchPositionDto;
 import com.pp.jobseeker.repositories.services.AuthenticationService;
 import com.pp.jobseeker.repositories.services.PositionService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -19,6 +21,7 @@ import javax.validation.constraints.NotNull;
 import java.net.URI;
 import java.util.*;
 
+@Api(value = "PositionController", tags = {"PositionController"})
 @RequestMapping(value = "/position")
 @RestController
 public class PositionController {
@@ -29,6 +32,7 @@ public class PositionController {
     @Autowired
     AuthenticationService authenticationService;
 
+    @ApiOperation(value = "Create a new position", response = Map.class, tags = "createPosition")
     @RequestMapping(method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Map<String, String>> createPosition(@Valid @RequestBody CreatePositionDto createPositionDto)
             throws AuthenticationException {
@@ -44,6 +48,7 @@ public class PositionController {
         return new ResponseEntity<>(Collections.singletonMap("URL", uri.toString()), HttpStatus.CREATED);
     }
 
+    @ApiOperation(value = "Search for positions", response = Map.class, tags = "searchPosition")
     @GetMapping(value = "/search", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Map<String, List<URI>>> searchPosition(@Valid @RequestBody SearchPositionDto searchPositionDto)
             throws AuthenticationException {
@@ -67,6 +72,7 @@ public class PositionController {
         return new ResponseEntity<>(Collections.singletonMap("searchResults", uriList), HttpStatus.OK);
     }
 
+    @ApiOperation(value = "Get a specific position", response = Position.class, tags = "getPosition")
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Position> getPosition(@PathVariable @NotNull @DecimalMin("0") Long id) {
         if (positionService.getPosition(id).isPresent()) {
