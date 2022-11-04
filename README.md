@@ -2,7 +2,7 @@
 
 This is a simple Spring based POC implementation of a job seeker application.
 
-Live demo: 
+Live demo: https://jobseeker-poc.herokuapp.com/
 
 ### Prerequisites
 
