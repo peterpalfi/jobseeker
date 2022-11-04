@@ -13,16 +13,17 @@ This is a simple Spring based POC implementation of a job seeker application.
 
 ### Installation
 
-building the project with maven:
+Building the project with maven:
+
 
 ```powershell
-> .\mvnw clean install
+project's root directory> .\mvnw clean install
 ```
 
-running the project locally:
+Running the project locally:
 
 ```powershell
-> java -jar .\jobseeker-0.0.1-SNAPSHOT.jar
+project's root directory\target> java -jar .\jobseeker-0.0.1-SNAPSHOT.jar
 ```
 
 ## Usage
@@ -135,13 +136,12 @@ Response body:
 
 ![registration already exists](https://raw.githubusercontent.com/peterpalfi/jobseeker/main/usage/registration%20already%20exists.png "registration already exists")
 
-
 ## Possibilities for further development
 
-- changing to a persistent database
-- providing better exception handling and adding custom exceptions
-- improving the error response
-- using the AuthenticationFailureHandler for API key authentication
-- implementing testing methodologies (unit tests, integration tests)
-- adding spring's [production-ready features](https://docs.spring.io/spring-boot/docs/2.2.x/reference/html/production-ready-features.html)
-- [enabling https](https://docs.spring.io/spring-cloud-skipper/docs/1.0.0.BUILD-SNAPSHOT/reference/html/configuration-security-enabling-https.html)
+- Using a persistent database
+- Providing better exception handling and adding custom exceptions
+- Improving the error response
+- Using the AuthenticationFailureHandler for API key authentication
+- Implementing testing methodologies (unit tests, integration tests)
+- Adding spring's [production-ready features](https://docs.spring.io/spring-boot/docs/2.2.x/reference/html/production-ready-features.html)
+- [Enabling https](https://docs.spring.io/spring-cloud-skipper/docs/1.0.0.BUILD-SNAPSHOT/reference/html/configuration-security-enabling-https.html)
