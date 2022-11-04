@@ -2,7 +2,10 @@
 
 This is a simple Spring based POC implementation of a job seeker application.
 
-Live demo: https://jobseeker-poc.herokuapp.com/
+### Try it out
+
+- [Live Demo](https://jobseeker-poc.herokuapp.com/)
+- [Swagger UI Documentation](https://jobseeker-poc.herokuapp.com/swagger-ui/index.html)
 
 ### Prerequisites
 
@@ -24,7 +27,7 @@ running the project locally:
 
 ## Usage
 
-You can access the console at the following URL: http://localhost:8080/h2-ui/login.jsp
+You can access the H2 database console at the following URL: http://localhost:8080/h2-ui/login.jsp
 
 - JDBC URL: jdbc:h2:mem:jobseeker_db
 - User Name: user
@@ -131,9 +134,6 @@ Response body:
 ### Registration already exists
 
 ![registration already exists](https://raw.githubusercontent.com/peterpalfi/jobseeker/main/usage/registration%20already%20exists.png "registration already exists")
-
-## Swagger UI
-
 
 
 ## Possibilities for further development
