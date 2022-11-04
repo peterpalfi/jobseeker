@@ -28,6 +28,8 @@ project's root directory\target> java -jar .\jobseeker-0.0.1-SNAPSHOT.jar
 
 ## Usage
 
+### Accessing the database console
+
 You can access the H2 database console at the following URL: http://localhost:8080/h2-ui/login.jsp
 
 - JDBC URL: jdbc:h2:mem:jobseeker_db
