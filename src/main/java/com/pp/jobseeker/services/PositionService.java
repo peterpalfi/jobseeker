@@ -1,4 +1,4 @@
-package com.pp.jobseeker.repositories.services;
+package com.pp.jobseeker.services;
 
 import com.pp.jobseeker.models.Position;
 import com.pp.jobseeker.repositories.PositionRepository;

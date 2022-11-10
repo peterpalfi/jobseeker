@@ -1,4 +1,4 @@
-package com.pp.jobseeker.repositories.services;
+package com.pp.jobseeker.services;
 
 import com.pp.jobseeker.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -2,7 +2,7 @@ package com.pp.jobseeker.controllers;
 
 import com.pp.jobseeker.exceptions.ClientAlreadyExistsException;
 import com.pp.jobseeker.models.dtos.RegisterClientDto;
-import com.pp.jobseeker.repositories.services.ClientService;
+import com.pp.jobseeker.services.ClientService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
